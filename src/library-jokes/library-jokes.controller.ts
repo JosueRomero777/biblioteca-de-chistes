@@ -2,8 +2,10 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { LibraryJokesService } from './library-jokes.service';
 import { CreateLibraryJokeDto } from './dto/create-library-joke.dto';
 import { UpdateLibraryJokeDto } from './dto/update-library-joke.dto';
+import { ApiTags } from '@nestjs/swagger';
 
 @Controller('library-jokes')
+@ApiTags('library-jokes')
 export class LibraryJokesController {
   constructor(private readonly libraryJokesService: LibraryJokesService) {}
 
