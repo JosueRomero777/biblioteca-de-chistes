@@ -11,7 +11,11 @@ export class LibraryJokesService {
 
 
    findAll() {
-   return this.prisma.libraryJoke.findMany;
+   return this.prisma.libraryJoke.findMany
+   ({
+    
+   })
+
    }
 
   findOne(id: number) {
